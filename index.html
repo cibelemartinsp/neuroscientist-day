@@ -146,22 +146,39 @@
 
   /* SOBRE */
   .about{ background:var(--blush-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-  .about .wrap{ display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center; }
+  .about .wrap{ display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:start; }
   .about-figure{
-    aspect-ratio:16/9; border-radius:18px;
+    aspect-ratio:4/5; border-radius:18px;
     background:radial-gradient(circle at 40% 25%, #fff, var(--blush) 75%);
     border:1px solid var(--line);
     display:flex; align-items:center; justify-content:center; color:var(--rose-deep);
     font-family:'Fraunces',serif; font-style:italic; font-size:15px; text-align:center; padding:24px;
     overflow:hidden;
   }
-  .about-figure video{ width:100%; height:100%; object-fit:cover; border-radius:17px; display:block; }
+  .about-figure img{ width:100%; height:100%; object-fit:cover; border-radius:17px; display:block; }
   .about-body p{ font-size:17px; line-height:1.75; color:#3d332e; margin:0 0 18px; }
   .about-body p:last-child{margin-bottom:0;}
   .stat-row{ display:flex; gap:36px; margin-top:34px; flex-wrap:wrap; }
   .stat{ }
   .stat .num{ font-family:'Fraunces',serif; font-size:30px; color:var(--rose-deep); }
   .stat .label{ font-size:13px; color:var(--taupe); margin-top:4px; }
+
+  /* PESQUISA */
+  .pesquisa{ border-bottom:1px solid var(--line); }
+  .pesquisa .wrap{ display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center; }
+  .pesquisa-figure{
+    aspect-ratio:16/9; border-radius:18px; overflow:hidden;
+    border:1px solid var(--line); background:var(--blush-soft);
+  }
+  .pesquisa-figure video{ width:100%; height:100%; object-fit:cover; display:block; }
+  .pesquisa-body p{ font-size:17px; line-height:1.75; color:#3d332e; margin:0 0 18px; }
+  .scholar-link{
+    display:inline-flex; align-items:center; gap:8px; margin-top:8px;
+    font-family:'Fraunces',serif; font-size:15.5px; color:var(--rose-deep);
+    border-bottom:1px solid var(--rose-deep); padding-bottom:2px; text-decoration:none;
+  }
+  .scholar-link svg{ width:16px; height:16px; }
+  @media (max-width:860px){ .about .wrap{grid-template-columns:1fr;} .pesquisa .wrap{grid-template-columns:1fr;} }
   @media (max-width:860px){ .about .wrap{grid-template-columns:1fr;} }
 
   /* PILARES / conteudo gratuito */
@@ -242,6 +259,7 @@
     <div class="brand"><img src="logo.png" alt="Neurocientist Day"></div>
     <ul>
       <li><a class="navlink" href="#sobre">Sobre</a></li>
+      <li><a class="navlink" href="#pesquisa">Minha pesquisa</a></li>
       <li><a class="navlink" href="#conteudo">Conteúdo</a></li>
       <li><a class="navlink" href="#guia">Guia gratuito</a></li>
       <li><a class="navlink" href="#mentoria">Mentoria</a></li>
@@ -273,17 +291,37 @@
 <section id="sobre" class="about">
   <div class="wrap">
     <div class="about-figure">
-      <video src="laboratorio.mp4" poster="laboratorio-poster.jpg" controls playsinline preload="metadata"></video>
+      <img src="foto-sobre.jpg" alt="Foto de formatura">
     </div>
     <div class="about-body">
       <div class="eyebrow" style="margin-bottom:18px;">Sobre mim</div>
-      <p>Vim de fora da academia tradicional europeia — sem rede de contatos, sem saber como funcionava candidatura, orientador ou bolsa. Fui aprendendo cada etapa na prática, muitas vezes do jeito mais difícil.</p>
-      <p>Hoje faço doutorado em neurociência na França e compartilho essa rotina no Instagram. Quero transformar o que aprendi em um caminho mais curto para outros brasileiros que sonham em pesquisar fora — em qualquer área, não só na minha.</p>
+      <p>Construí meu caminho até a academia europeia sem suporte ou indicações. Sem saber como funcionavam as dinâmicas de seleção, bolsas ou projetos, fui aprendendo na prática, sem medo de errar.</p>
+      <p>Fiz licenciatura em Ciências Biológicas na Universidade Federal de Santa Catarina (UFSC), onde também cursei meu mestrado em Neurociência. Guiada pela pesquisa desde 2012, durante bolsas de iniciação científica no Colégio de Aplicação da UFSC, hoje sigo sendo a neurocientista que no fundo sempre sonhei. Faço doutorado em neurociência na França, na escola de doutorado "Cérebro, cognição e comportamento" na Sorbonne, e trabalho no Instituto do Cérebro de Paris. Além disso, venho compartilhando essa rotina louca de doutorado no Instagram.</p>
+      <p>Quero transformar o que aprendi com minhas candidaturas em um caminho mais curto para outros brasileiros que sonham em pesquisar fora, em qualquer área, não só na minha.</p>
       <div class="stat-row">
         <div class="stat"><div class="num">🇫🇷</div><div class="label">Doutorado em<br>neurociência, França</div></div>
         <div class="stat"><div class="num">🇧🇷</div><div class="label">Brasileira, primeira<br>geração na pós-graduação fora</div></div>
         <div class="stat"><div class="num">🐭</div><div class="label">Rotina real de<br>laboratório, sem filtro</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="pesquisa" class="pesquisa">
+  <div class="wrap">
+    <div class="pesquisa-figure">
+      <video src="laboratorio.mp4" poster="laboratorio-poster.jpg" controls playsinline preload="metadata"></video>
+    </div>
+    <div class="pesquisa-body">
+      <div class="eyebrow" style="margin-bottom:18px;">Minha pesquisa em Paris</div>
+      <p>No meu doutorado investigo como o córtex visual monta e afina suas redes locais durante o desenvolvimento, com foco em duas populações cruciais de interneurônios gabaérgicos: os que expressam parvalbumina (PV) e somatostatina (SST).</p>
+      <p>Essas células são os principais reguladores do equilíbrio entre excitação e inibição no circuito cortical. Quando esse eixo falha, por exemplo, devido a alterações na sinalização de receptores de NMDA, o processamento sensorial é comprometido, um mecanismo frequentemente implicado em transtornos do neurodesenvolvimento, como o autismo e a esquizofrenia.</p>
+      <p>Para rastrear como essas propriedades funcionais emergem, utilizo imagens de cálcio de dois fótons in vivo em camundongos, registrando a atividade celular no córtex visual primário (V1) em múltiplas janelas do desenvolvimento pós-natal até a idade adulta. Ao compreender o cronograma exato de como essas redes neurais encontram seu equilíbrio, dou um passo essencial para entender onde e como o sistema desanda nos transtornos do neurodesenvolvimento.</p>
+      <p>Para quem já está afiado no inglês (ou francês), no vídeo mostro um pouco do que faço aqui em Paris.</p>
+      <a class="scholar-link" href="https://scholar.google.com/citations?user=wyYQ0QkAAAAJ&hl=pt-BR" target="_blank" rel="noopener">
+        Veja meus artigos publicados aqui
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+      </a>
     </div>
   </div>
 </section>

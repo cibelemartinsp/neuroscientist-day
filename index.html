@@ -146,14 +146,16 @@
 
   /* SOBRE */
   .about{ background:var(--blush-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-  .about .wrap{ display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:start; }
+  .about .wrap{ display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center; }
   .about-figure{
-    aspect-ratio:4/5; border-radius:18px;
+    aspect-ratio:16/9; border-radius:18px;
     background:radial-gradient(circle at 40% 25%, #fff, var(--blush) 75%);
     border:1px solid var(--line);
     display:flex; align-items:center; justify-content:center; color:var(--rose-deep);
     font-family:'Fraunces',serif; font-style:italic; font-size:15px; text-align:center; padding:24px;
+    overflow:hidden;
   }
+  .about-figure video{ width:100%; height:100%; object-fit:cover; border-radius:17px; display:block; }
   .about-body p{ font-size:17px; line-height:1.75; color:#3d332e; margin:0 0 18px; }
   .about-body p:last-child{margin-bottom:0;}
   .stat-row{ display:flex; gap:36px; margin-top:34px; flex-wrap:wrap; }
@@ -200,7 +202,12 @@
   #formMsg{ margin-top:14px; font-size:13.5px; color:var(--rose); display:none; }
 
   /* MENTORIA */
-  .mentoria .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  .mentoria{ position:relative; overflow:hidden; }
+  .mentoria .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; position:relative; z-index:1; }
+  .mentoria-decor{
+    position:absolute; left:-6px; bottom:-8px; width:150px; height:auto;
+    opacity:.75; z-index:0; pointer-events:none;
+  }
   .mentoria-card{
     background:var(--blush-soft); border:1px solid var(--line); border-radius:22px; padding:40px;
   }
@@ -250,7 +257,7 @@
       <div class="hero-mark">
         <h1>Saindo da bancada no Brasil para o <span class="script">doutorado</span> na Europa.</h1>
       </div>
-      <p class="lead">Sou brasileira, fiz minha graduação e mestrado na UFSC e hoje faço doutorado em neurociência na França. Uso a rotina real do laboratório para te mostrar como é o PhD fora, e, mesmo que você não saiba por onde começar, organizo aqui tudo o que gostaria de ter sabido antes.</p>
+      <p class="lead">Sou brasileira, fiz minha graduação e mestrado na UFSC e hoje faço doutorado em neurociência na França. Uso a rotina real do laboratório para te mostrar como é o PhD fora, e, mesmo que você não saiba por onde começar, organizo aqui tudo o que gostaria de ter sabido antes.".</p>
       <div class="hero-ctas">
         <a class="btn" href="#guia">Baixar guia gratuito</a>
         <a class="btn ghost" href="#conteudo">Ver por onde começar</a>
@@ -265,7 +272,9 @@
 
 <section id="sobre" class="about">
   <div class="wrap">
-    <div class="about-figure">"o laboratório visto<br>de dentro"<br><span style="font-size:12px; opacity:.7;">— outra foto sua aqui</span></div>
+    <div class="about-figure">
+      <video src="laboratorio.mp4" poster="laboratorio-poster.jpg" controls playsinline preload="metadata"></video>
+    </div>
     <div class="about-body">
       <div class="eyebrow" style="margin-bottom:18px;">Sobre mim</div>
       <p>Vim de fora da academia tradicional europeia — sem rede de contatos, sem saber como funcionava candidatura, orientador ou bolsa. Fui aprendendo cada etapa na prática, muitas vezes do jeito mais difícil.</p>
@@ -349,6 +358,7 @@
 </section>
 
 <section id="mentoria" class="mentoria">
+  <img class="mentoria-decor" src="torre-eiffel.svg" alt="" aria-hidden="true">
   <div class="wrap">
     <div>
       <div class="eyebrow">Acompanhamento individual</div>

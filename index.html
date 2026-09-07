@@ -165,20 +165,26 @@
 
   /* PESQUISA */
   .pesquisa{ border-bottom:1px solid var(--line); }
-  .pesquisa .wrap{ display:grid; grid-template-columns:1.15fr .85fr; gap:48px; align-items:center; }
+  .pesquisa .wrap{ display:flex; flex-direction:column; align-items:center; }
+  .pesquisa-body{ max-width:720px; width:100%; }
+  .pesquisa-body .eyebrow{ justify-content:center; }
+  .pesquisa-body p{
+    font-size:17px; line-height:1.75; color:#3d332e; margin:0 0 18px;
+    text-align:justify; text-justify:inter-word;
+  }
   .pesquisa-figure{
+    width:100%; max-width:640px; margin:16px auto 40px;
     aspect-ratio:16/9; border-radius:18px; overflow:hidden;
     border:1px solid var(--line); background:var(--blush-soft);
   }
   .pesquisa-figure video{ width:100%; height:100%; object-fit:cover; display:block; }
-  .pesquisa-body p{ font-size:17px; line-height:1.75; color:#3d332e; margin:0 0 18px; }
+  .pesquisa-body .scholar-link-wrap{ text-align:center; margin-top:8px; }
   .scholar-link{
     display:inline-flex; align-items:center; gap:8px; margin-top:8px;
     font-family:'Fraunces',serif; font-size:15.5px; color:var(--rose-deep);
     border-bottom:1px solid var(--rose-deep); padding-bottom:2px; text-decoration:none;
   }
   .scholar-link svg{ width:16px; height:16px; }
-  @media (max-width:860px){ .about .wrap{grid-template-columns:1fr;} .pesquisa .wrap{grid-template-columns:1fr;} }
   @media (max-width:860px){ .about .wrap{grid-template-columns:1fr;} }
 
   /* PILARES / conteudo gratuito */
@@ -309,15 +315,16 @@
 
 <section id="pesquisa" class="pesquisa">
   <div class="wrap">
+    <div class="pesquisa-body">
+      <div class="eyebrow" style="margin-bottom:18px;">Minha pesquisa em Paris</div>
+      <p>No meu doutorado, investigo como o córtex visual monta e afina suas redes locais, com foco em interneurônios que expressam parvalbumina e somatostatina. Essas células regulam o equilíbrio entre excitação e inibição no circuito cortical. Quando esse eixo falha devido a alterações em receptores NMDA, o processamento sensorial é comprometido, um mecanismo central em transtornos como o autismo e a esquizofrenia.</p>
+      <p>Para rastrear essas propriedades, utilizo imagens de cálcio de dois fótons in vivo em camundongos, registrando a atividade no córtex visual primário desde o desenvolvimento pós-natal até a idade adulta. Compreender o cronograma desse equilíbrio neural ajuda a mapear onde e como o sistema falha nesses transtornos.</p>
+      <p>Para quem já está afiado no inglês (ou francês), no vídeo mostro um pouco do que faço aqui em Paris.</p>
+    </div>
     <div class="pesquisa-figure">
       <video src="laboratorio.mp4" poster="laboratorio-poster.jpg" controls playsinline preload="metadata"></video>
     </div>
-    <div class="pesquisa-body">
-      <div class="eyebrow" style="margin-bottom:18px;">Minha pesquisa em Paris</div>
-      <p>No meu doutorado investigo como o córtex visual monta e afina suas redes locais durante o desenvolvimento, com foco em duas populações cruciais de interneurônios gabaérgicos: os que expressam parvalbumina (PV) e somatostatina (SST).</p>
-      <p>Essas células são os principais reguladores do equilíbrio entre excitação e inibição no circuito cortical. Quando esse eixo falha, por exemplo, devido a alterações na sinalização de receptores de NMDA, o processamento sensorial é comprometido, um mecanismo frequentemente implicado em transtornos do neurodesenvolvimento, como o autismo e a esquizofrenia.</p>
-      <p>Para rastrear como essas propriedades funcionais emergem, utilizo imagens de cálcio de dois fótons in vivo em camundongos, registrando a atividade celular no córtex visual primário (V1) em múltiplas janelas do desenvolvimento pós-natal até a idade adulta. Ao compreender o cronograma exato de como essas redes neurais encontram seu equilíbrio, dou um passo essencial para entender onde e como o sistema desanda nos transtornos do neurodesenvolvimento.</p>
-      <p>Para quem já está afiado no inglês (ou francês), no vídeo mostro um pouco do que faço aqui em Paris.</p>
+    <div class="scholar-link-wrap">
       <a class="scholar-link" href="https://scholar.google.com/citations?user=wyYQ0QkAAAAJ&hl=pt-BR" target="_blank" rel="noopener">
         Veja meus artigos publicados aqui
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>

@@ -111,6 +111,7 @@
   .hero-mark svg{ position:absolute; top:-34px; left:6%; width:150px; height:auto; }
   .hero p.lead{
     margin-top:24px; font-size:16px; line-height:1.65; color:#4a3f39; max-width:46ch;
+    text-align:justify; text-justify:inter-word;
   }
   .hero-ctas{ display:flex; gap:14px; margin-top:34px; flex-wrap:wrap; }
   .hero-photo{
@@ -142,7 +143,7 @@
   section{ padding:88px 0; }
   .section-head{ max-width:640px; margin-bottom:52px; }
   .section-head h2{ font-size:clamp(28px,3.4vw,40px); margin-top:16px; }
-  .section-head p{ margin-top:16px; font-size:16.5px; color:#4a3f39; line-height:1.6; }
+  .section-head p{ margin-top:16px; font-size:16.5px; color:#4a3f39; line-height:1.6; text-align:justify; text-justify:inter-word; }
 
   /* SOBRE */
   .about{ background:var(--blush-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
@@ -156,7 +157,7 @@
     overflow:hidden;
   }
   .about-figure img{ width:100%; height:100%; object-fit:cover; border-radius:17px; display:block; }
-  .about-body p{ font-size:17px; line-height:1.75; color:#3d332e; margin:0 0 18px; }
+  .about-body p{ font-size:17px; line-height:1.75; color:#3d332e; margin:0 0 18px; text-align:justify; text-justify:inter-word; }
   .about-body p:last-child{margin-bottom:0;}
   .stat-row{ display:flex; gap:36px; margin-top:34px; flex-wrap:wrap; }
   .stat{ }
@@ -166,14 +167,14 @@
   /* PESQUISA */
   .pesquisa{ border-bottom:1px solid var(--line); }
   .pesquisa .wrap{ display:flex; flex-direction:column; align-items:center; }
-  .pesquisa-body{ max-width:720px; width:100%; }
+  .pesquisa-body{ max-width:100%; width:100%; }
   .pesquisa-body .eyebrow{ justify-content:center; }
   .pesquisa-body p{
     font-size:17px; line-height:1.75; color:#3d332e; margin:0 0 18px;
     text-align:justify; text-justify:inter-word;
   }
   .pesquisa-figure{
-    width:100%; max-width:640px; margin:16px auto 40px;
+    width:100%; max-width:560px; margin:16px auto 40px;
     aspect-ratio:16/9; border-radius:18px; overflow:hidden;
     border:1px solid var(--line); background:var(--blush-soft);
   }
@@ -192,7 +193,7 @@
   .pillar{ background:var(--paper); padding:34px 28px; min-height:220px; display:flex; flex-direction:column; justify-content:space-between; }
   .pillar .n{ font-family:'Allura',cursive; font-size:30px; color:var(--rose); }
   .pillar h3{ font-size:19px; margin-top:14px; font-weight:600; }
-  .pillar p{ font-size:14.5px; color:var(--taupe); margin-top:10px; line-height:1.55; }
+  .pillar p{ font-size:14.5px; color:var(--taupe); margin-top:10px; line-height:1.55; text-align:justify; text-justify:inter-word; }
   @media (max-width:960px){ .pillars{grid-template-columns:1fr 1fr;} }
   @media (max-width:560px){ .pillars{grid-template-columns:1fr;} }
 
@@ -204,7 +205,7 @@
   .newsletter .wrap{ padding:0; max-width:none; }
   .nl-inner{ display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; position:relative; z-index:1; }
   .newsletter h2{ color:var(--paper); font-size:clamp(26px,3.2vw,36px); }
-  .newsletter p{ color:#d8cbc2; margin-top:14px; font-size:16px; line-height:1.65; max-width:44ch; }
+  .newsletter p{ color:#d8cbc2; margin-top:14px; font-size:16px; line-height:1.65; max-width:44ch; text-align:justify; text-justify:inter-word; }
   .nl-form{ display:flex; gap:10px; margin-top:26px; flex-wrap:wrap; }
   .nl-form input[type=email]{
     flex:1; min-width:220px; padding:14px 18px; border-radius:100px; border:1px solid #443a34;
@@ -317,8 +318,7 @@
   <div class="wrap">
     <div class="pesquisa-body">
       <div class="eyebrow" style="margin-bottom:18px;">Minha pesquisa em Paris</div>
-      <p>No meu doutorado, investigo como o córtex visual monta e afina suas redes locais, com foco em interneurônios que expressam parvalbumina e somatostatina. Essas células regulam o equilíbrio entre excitação e inibição no circuito cortical. Quando esse eixo falha devido a alterações em receptores NMDA, o processamento sensorial é comprometido, um mecanismo central em transtornos como o autismo e a esquizofrenia.</p>
-      <p>Para rastrear essas propriedades, utilizo imagens de cálcio de dois fótons in vivo em camundongos, registrando a atividade no córtex visual primário desde o desenvolvimento pós-natal até a idade adulta. Compreender o cronograma desse equilíbrio neural ajuda a mapear onde e como o sistema falha nesses transtornos.</p>
+      <p>No meu doutorado, investigo como o córtex visual monta e afina suas redes locais, com foco em interneurônios que expressam parvalbumina e somatostatina. Essas células regulam o equilíbrio entre excitação e inibição no circuito cortical. Quando esse eixo falha devido a alterações em receptores NMDA, o processamento sensorial é comprometido, um mecanismo central em transtornos como o autismo e a esquizofrenia. Para rastrear essas propriedades, utilizo imagens de cálcio de dois fótons in vivo em camundongos, registrando a atividade no córtex visual primário desde o desenvolvimento pós-natal até a idade adulta. Compreender o cronograma desse equilíbrio neural ajuda a mapear onde e como o sistema falha nesses transtornos.</p>
       <p>Para quem já está afiado no inglês (ou francês), no vídeo mostro um pouco do que faço aqui em Paris.</p>
     </div>
     <div class="pesquisa-figure">
@@ -408,7 +408,7 @@
     <div>
       <div class="eyebrow">Acompanhamento individual</div>
       <h2 style="font-size:clamp(26px,3.2vw,38px); margin-top:16px;">Quando informação geral não basta, tem acompanhamento para o seu caso.</h2>
-      <p style="margin-top:18px; font-size:16.5px; color:#4a3f39; line-height:1.65; max-width:46ch;">Revisão de carta de motivação, direcionamento de país e orientador, e apoio durante o processo seletivo — pensado para a sua área e o seu momento, não uma fórmula genérica.</p>
+      <p style="margin-top:18px; font-size:16.5px; color:#4a3f39; line-height:1.65; max-width:46ch; text-align:justify; text-justify:inter-word;">Revisão de carta de motivação, direcionamento de país e orientador, e apoio durante o processo seletivo — pensado para a sua área e o seu momento, não uma fórmula genérica.</p>
     </div>
     <div class="mentoria-card">
       <span class="waitlist-tag">Lista de espera</span>
